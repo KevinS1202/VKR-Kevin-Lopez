@@ -1,0 +1,34 @@
+<body>
+<div class="cont_main">
+<?php
+session_start();
+if (!isset($_SESSION['user_id'])) {
+	header('location: ../');
+}
+require "../layouts/nav.html";
+?>
+<div class="cont_form">
+<div class="head">
+<h1>New Patient</h1>
+</div>
+<form method="post" action="../admin/Save_p.php">
+<label for="name">Name</label>
+<input name="name" placeholder="First Name" type="text">
+<label for="lastname">Last Name</label>
+<input name="lastname" placeholder="Last Name" type="text">
+<label for="gender">Gender</label>
+<input name="gender" placeholder="M or F" type="text">
+<label for="birthday">Birthday</label>
+<input name="birthday" placeholder="date" type="date">
+<label for="age">Age</label>
+<input name="age" placeholder="Old are you" type="text">
+<label for="bloodtype">Blood Type</label>
+<input name="bloodtype" placeholder="o +/-" type="text">
+<label for="phonenumber">Phone Number</label>
+<input name="phonenumber" placeholder="+7" type="text">
+<input type="submit" value="Save">
+</form>
+</div>
+</div>
+</body>
+</html>

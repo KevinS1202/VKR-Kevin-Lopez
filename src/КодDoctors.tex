@@ -1,0 +1,34 @@
+<body>
+<div class="cont_main">
+<?php
+session_start();
+if (!isset($_SESSION['user_id'])) {
+	header('location: ../');
+}
+require "../layouts/nav.html";
+?>
+<div class="cont_form">
+<div class="head">
+<h1>New Doctror</h1>
+</div>
+<form method="post" action="../admin/Save_d.php">
+<label for="name">Name</label>
+<input name="name" placeholder="First Name" type="text">
+<label for="lastname">Last Name</label>
+<input name="lastname" placeholder="Last Name" type="text">
+<label for="specialty">Specialty</label>
+<input name="specialty" placeholder="Specialty" type="text">
+<label for="officenumber">Officenumber</label>
+<input name="officenumber" placeholder="Officenumber" type="text">
+<label for="nursing">Nursing</label>
+<input name="nursing" placeholder="Nursing" type="text">
+<label for="username">User Name</label>
+<input name="username" placeholder="User Name" type="text">
+<label for="password">Password</label>
+<input name="password" placeholder="Password" type="password">
+<input type="submit" value="Save">
+</form>
+</div>
+</div>
+</body>
+</html>

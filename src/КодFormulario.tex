@@ -1,0 +1,57 @@
+<?php 
+$action = '../admin/save_a.php';
+function formulario($action,$input){
+	?>
+	<form method="post" action="<?php echo $action ;?>">
+	
+	<div class="form_grup">
+	<label for="name">Doctor's Name </label>
+	<input name="name" placeholder="Doctor's Name " type="text" require>
+	</div>
+	<div class="form_grup">
+	<label for="building_floor">Building floor</label>
+	<input name="building_floor" placeholder="Building floor" type="text" require>
+	</div>
+	<div class="form_grup">
+	<label for="number">Office number</label>
+	<input name="number" placeholder="Office_number" type="text" require>
+	</div>
+	<div class="form_grup">
+	<label for="idpatient">IDpatient</label>
+	<input name="idpatient" placeholder="IDpatient" type="text">
+	</div>
+	<div class="form_grup">
+	
+	<label for="diagnosis">Doctor's diagnosis</label>
+	<textarea maxlength="600" cols="40" rows="10" name="diagnosis" placeholder="Doctor's diagnosis" type="text"
+	require></textarea>
+	</div>
+	<div class="form_grup">
+	<label for="prehistory">Prehistory</label>
+	<textarea maxlength="600" cols="40" rows="10" name="prehistory" placeholder="Prehistory" type="text"
+	require></textarea>
+	</div>
+	<div class="form_grup">
+	<label for="processes">Examination_processes</label>
+	<textarea maxlength="600" cols="40" rows="10" name="processes" placeholder="processes" type="text"
+	require></textarea>
+	</div>
+	<div class="form_grup">
+	<label for="diagnose">Diagnose</label>
+	<textarea maxlength="600" cols="40" rows="10" name="diagnose" placeholder="Diagnose" type="text"
+	require></textarea>
+	</div>
+	<div class="form_grup">
+	<label for="treatment">Treatment</label>
+	<textarea maxlength="600" cols="40" rows="10" name="treatment" placeholder="Treatment" type="text"
+	require></textarea>
+	</div>
+	<div class="form_grup">
+	<label for="result">Analysis result</label>
+	<textarea maxlength="600" cols="40" rows="10" name="result" placeholder="Analysis result" type="text" require></textarea>
+	</div>
+	<input type="submit" name="submit" value="<?php echo $input ;?>">
+	</form>
+	<?php 
+	}
+	?>
